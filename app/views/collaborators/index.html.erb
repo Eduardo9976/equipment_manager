@@ -1,0 +1,27 @@
+<h1> Colaboradores </h1>
+
+<%= form_with url: search_collaborators_path, local: true, method: :get do |f| %>
+  <%= f.label :query, 'Busca'%>
+  <%= f.search_field :query %>
+  <%= f.submit 'Pesquisar'%>
+<% end %>  
+
+<%if @collaborators.empty? %>
+   <h3>Nenhum colaborador cadastrado </h3>
+<% end %>
+
+
+<%@collaborators.each do |collaborator| %>
+  <dl>
+    <dt> Nome: </dt>
+    <dd> <%= link_to collaborator.name, collaborator_path(collaborator) %> </dd>
+    <dt> Email: </dt>
+    <dd> <%= collaborator.email %> </dd>
+    <dt> Matrícula: </dt>
+    <dd> <%= collaborator.registration %> </dd>
+  </dl>
+<% end %>
+
+
+<%= link_to  "Voltar", root_path %>
+<%= link_to  "Novo Colaborador", new_collaborator_path %>

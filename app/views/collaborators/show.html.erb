@@ -1,0 +1,16 @@
+<h1> Colaborador </h1>
+
+<dl>
+  <dt>Nome:</dt>
+  <dd> <%=  @collaborator.name %> </dd>
+  <dt>E-mail:</dt>
+  <dd> <%=  @collaborator.email %> </dd>
+  <dt>Matrícula:</dt>
+  <dd> <%=  @collaborator.registration %> </dd>
+</dl>  
+
+<%=link_to "Voltar", collaborators_path %>
+<%= link_to "Editar", edit_collaborator_path%>
+<%= link_to "Apagar", @collaborator,
+              method: :delete,
+              data: { confirm: 'Deseja realmente apagar?' }%>

@@ -1,0 +1,14 @@
+<h1> Produto </h1>
+
+<dl>
+  <dt>Nome:</dt>
+  <dd> <%=  @product.name %> </dd>
+  <dt>Fabricante:</dt>
+  <dd> <%= @product.manufacturer.name %> </dd>
+</dl>  
+
+<%=link_to "Voltar", products_path %>
+<%= link_to  "Editar", edit_product_path(@product) %>
+<%= link_to  "Apagar", @product,
+                       method: :delete,
+                       data: { confirm: 'Deseja realmente apagar?' } %>

@@ -1,0 +1,25 @@
+<h1> Informações dos produtos </h1>
+<%= form_with url: search_descriptions_path, local: true, method: :get do |f| %>
+  <%= f.label :query, 'Busca'%>
+  <%= f.search_field :query %>
+  <%= f.submit 'Pesquisar'%>
+<% end %> 
+
+
+<%if @descriptions.empty? %>
+   <h3>Nenhuma informação cadastrada </h3>
+<% end %>
+
+
+<%@descriptions.each do |description| %>
+  <dl>
+    <dt> Modelo: </dt>
+    <dd> <%= description.model  %> </dd>
+    <dt> Número de série: </dt>
+    <dd> <%= link_to description.serie_number, description_path(description) %> </dd>
+  </dl>
+<% end %>
+
+
+<%= link_to 'Registrar informações', new_description_path %>
+<%= link_to 'Voltar', root_path %>

@@ -1,0 +1,16 @@
+<h1>Pesquisa</h1>
+<h2>O resultado da busca por: <%= @search_query %>  </h2>
+<h5>Número de colaboradores encontrados: <%= @collaborators.count%>
+
+<p> <% @collaborators.each do |collaborator| %> </p>
+<dl>
+  <dt>  Nome </dt>
+  <dd> <%= link_to "#{collaborator.name}", collaborator_path(collaborator) %> </dd>
+  <dt> E-mail </dt>
+  <dd> <%= collaborator.email %> </dd>
+  <dt> Matrícula </dt>
+  <dd> <%= collaborator.registration %> </dd>
+</dl>
+<% end %>  
+
+<%= link_to 'Voltar', root_path %>

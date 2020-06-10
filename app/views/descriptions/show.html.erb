@@ -1,0 +1,26 @@
+<h1> Descrição </h1>
+
+<dl>
+  <dt>Produto:</dt>
+  <dd> <%=  @description.product.name %> </dd>
+  <dt>Fabricante:</dt>
+  <dd> <%=  @description.product.manufacturer.name %> </dd>
+  <dt>Modelo:</dt>
+  <dd> <%=  @description.model %> </dd>
+  <dt>Número de série:</dt>
+  <dd> <%=  @description.serie_number %> </dd>
+  <dt>Memória:</dt>
+  <dd> <%=  @description.memory %> </dd>
+  <dt>HD:</dt>
+  <dd> <%=  @description.hard_drive %> </dd>
+  <dt>Sistema Operacional:</dt>
+  <dd> <%=  @description.operational_system %> </dd>
+  <dt>Garantia até:</dt>
+  <dd> <%=  @description.warranty %> </dd>
+</dl>  
+
+<%=link_to "Voltar", collaborators_path %>
+<%= link_to "Editar", edit_description_path%>
+<%= link_to "Apagar", @description,
+              method: :delete,
+              data: { confirm: 'Deseja realmente apagar?' }%>

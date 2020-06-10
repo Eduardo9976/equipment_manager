@@ -1,0 +1,16 @@
+<h1>Pesquisa</h1>
+<h2>O resultado da busca por: <%= @search_query %>  </h2>
+<h5> Número de colaboradores encontrados: <%= @descriptions.count%> </h5>
+
+<p> <% @descriptions.each do |description| %> </p>
+<dl>
+  <dt>  Número de série </dt>
+  <dd> <%= link_to "#{description.serie_number}", description_path(description) %> </dd>
+  <dt> Modelo </dt>
+  <dd> <%= description.model %> </dd>
+  <dt> Data final garantia </dt>
+  <dd> <%= description.warranty %> </dd>
+</dl>
+<% end %>  
+
+<%= link_to 'Voltar', root_path %>

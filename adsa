@@ -1,0 +1,15 @@
+
+[1mFrom:[0m /home/projects/Workspace/equipment_manager/spec/features/description/admin_register_description_spec.rb:35 :
+
+    [1;34m30[0m:     fill_in [31m[1;31m'[0m[31mSistema Operacional[1;31m'[0m[31m[0m, [35mwith[0m: [31m[1;31m'[0m[31mMac OS Sierra[1;31m'[0m[31m[0m
+    [1;34m31[0m:     fill_in [31m[1;31m"[0m[31mGarantia[1;31m"[0m[31m[0m,	[35mwith[0m: [1;34;4mDateTime[0m.now + [1;34m1[0m.year
+    [1;34m32[0m:     
+    [1;34m33[0m:     binding.pry
+    [1;34m34[0m:     
+ => [1;34m35[0m:     click_on [31m[1;31m'[0m[31mEnviar[1;31m'[0m[31m[0m
+    [1;34m36[0m: 
+    [1;34m37[0m:     
+    [1;34m38[0m: 
+    [1;34m39[0m:     expect(page).to have_content(product.name)
+    [1;34m40[0m:     expect(page).to have_content([31m[1;31m"[0m[31mMacbook Pro 13 pol[1;31m"[0m[31m[0m)  
+
