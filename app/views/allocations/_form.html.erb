@@ -1,0 +1,11 @@
+
+<%= form_with( model: @allocation, local:true ) do |f|  %>
+  <%= f.label :collaborator_id, 'Colaborador'%>
+  <%= f.collection_select :collaborator_id, @collaborators, :id, :name%>
+  <%= f.label :product_id, 'Produto'%>
+  <%= f.collection_select :product_id, @products, :id, :name, class:"product_id"%>
+  <%= f.label :description_id, 'Descrição'%>
+  <%= f.collection_select :description_id, @descriptions, :id, :model%>
+  <%= f.submit('Enviar') %>
+<% end %>
+

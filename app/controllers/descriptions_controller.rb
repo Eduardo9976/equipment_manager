@@ -4,6 +4,10 @@ class DescriptionsController < ApplicationController
 
   def index
     @descriptions = Description.all
+    
+    if params[:product_id].present?
+      @descriptions = Description.where(product_id: params[:product_id])
+    end  
   end
 
 

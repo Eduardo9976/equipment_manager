@@ -9,5 +9,5 @@ Rails.application.routes.draw do
   resources :collaborators do 
     get 'search', on: :collection
   end
-  resources :aggregates
+  resources :allocations
 end

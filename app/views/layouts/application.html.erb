@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>EquipmentManager</title>
+    <title>Equipment Manager</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -9,8 +9,9 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
+    <p class="paragrafo"> teste </p>
     <p> <%= flash[:notice ]%> </p>
     <p> <%= flash[:alert ]%>  </p>
-    <%= yield %>   
+    <%= yield %> 
   </body>
 </html>

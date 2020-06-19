@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_08_232232) do
+ActiveRecord::Schema.define(version: 2020_06_12_010838) do
+
+  create_table "allocations", force: :cascade do |t|
+    t.integer "collaborator_id", null: false
+    t.integer "product_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["collaborator_id"], name: "index_allocations_on_collaborator_id"
+    t.index ["product_id"], name: "index_allocations_on_product_id"
+  end
 
   create_table "collaborators", force: :cascade do |t|
     t.string "name"
@@ -59,6 +68,8 @@ ActiveRecord::Schema.define(version: 2020_06_08_232232) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "allocations", "collaborators"
+  add_foreign_key "allocations", "products"
   add_foreign_key "descriptions", "products"
   add_foreign_key "products", "manufacturers"
 end
