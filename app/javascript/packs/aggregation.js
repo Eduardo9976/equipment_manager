@@ -1,3 +1,4 @@
+/*
 const formulario = document.querySelectorAll('form')
 formulario.forEach((element) => {
   element.addEventListener('change', handleChange)
@@ -16,5 +17,14 @@ function handleChange(event) {
 
 }
 
-const paragrafo = document.querySelector('p')
-console.log(paragrafo)
+*/
+
+const paragrafo = document.querySelector('.paragrafo')
+console.log(paragrafo);
+
+paragrafo.addEventListener('click', handleClick);
+
+function handleClick(event) {
+  console.log('clicou')
+  console.log(event.target)
+};
