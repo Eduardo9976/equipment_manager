@@ -1,13 +1,13 @@
 require 'rails_helper'
 
-feature 'admin register allocations' do 
-  scenario 'admin visit allocations home page ' do
+feature 'admin register Descriptions' do 
+  scenario 'admin visit Descriptions home page ' do
 
 
     visit root_path
     click_on 'Agregados'
 
-    expect(current_path).to eq(allocations_path)
+    expect(current_path).to eq(Descriptions_path)
     expect(page).to have_content('Agregados')
     expect(page).to have_content('Voltar')  
   end
@@ -19,10 +19,10 @@ feature 'admin register allocations' do
     click_on 'Agregar'
     
     
-    expect(current_path).to eq(new_allocation_path)
+    expect(current_path).to eq(new_Description_path)
     expect(page).to have_content('Agregar')  
   end
-  scenario 'admin register new allocation' do
+  scenario 'admin register new Description' do
     collaborator = create(:collaborator)
     product = create(:product)
     description = create(:description)

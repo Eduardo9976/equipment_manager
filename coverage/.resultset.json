@@ -49,7 +49,7 @@
           null
         ]
       },
-      "/home/projects/Workspace/equipment_manager/app/controllers/allocations_controller.rb": {
+      "/home/projects/Workspace/equipment_manager/app/controllers/Descriptions_controller.rb": {
         "lines": [
           1,
           null,
@@ -117,7 +117,7 @@
           null
         ]
       },
-      "/home/projects/Workspace/equipment_manager/app/models/allocation.rb": {
+      "/home/projects/Workspace/equipment_manager/app/models/Description.rb": {
         "lines": [
           1,
           1,

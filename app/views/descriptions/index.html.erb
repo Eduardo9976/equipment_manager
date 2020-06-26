@@ -1,3 +1,4 @@
+<%= stylesheet_link_tag "description" %>
 <h1> Informações dos produtos </h1>
 <%= form_with url: search_descriptions_path, local: true, method: :get do |f| %>
   <%= f.label :query, 'Busca'%>
@@ -17,6 +18,8 @@
     <dd> <%= description.model  %> </dd>
     <dt> Número de série: </dt>
     <dd> <%= link_to description.serie_number, description_path(description) %> </dd>
+    <dt> Produto: </dt>
+    <dd> <%= description.product.name %> </dd>
   </dl>
 <% end %>
 

@@ -1,0 +1,16 @@
+<h1> Alocação </h1>
+
+<dl>
+  <dt>Nome do colaborador:</dt>
+  <dd> <%=  @description.collaborator.name %> </dd>
+  <dt>produto:</dt>
+  <dd> <%=  @description.product.name %> </dd>
+  <dt>Matrícula:</dt>
+  <dd> <%=  @description %> </dd>
+</dl>  
+
+<%=link_to "Voltar", collaborators_path %>
+<%= link_to "Editar", edit_collaborator_path%>
+<%= link_to "Apagar", @description,
+              method: :delete,
+              data: { confirm: 'Deseja realmente apagar?' }%>

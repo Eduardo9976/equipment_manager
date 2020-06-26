@@ -93,7 +93,7 @@
           </tr>
         
           <tr class="t-file">
-            <td class="strong t-file__name"><a href="#dc2336b4277082e07d76836cf0e426e35349da6c" class="src_link" title="app/controllers/allocations_controller.rb">app/controllers/allocations_controller.rb</a></td>
+            <td class="strong t-file__name"><a href="#dc2336b4277082e07d76836cf0e426e35349da6c" class="src_link" title="app/controllers/Descriptions_controller.rb">app/controllers/Descriptions_controller.rb</a></td>
             <td class="red strong cell--number t-file__coverage">66.67 %</td>
             <td class="cell--number">41</td>
             <td class="cell--number">21</td>
@@ -203,7 +203,7 @@
           </tr>
         
           <tr class="t-file">
-            <td class="strong t-file__name"><a href="#d6b62244ed636fd13ce15d84e921e401648c1390" class="src_link" title="app/models/allocation.rb">app/models/allocation.rb</a></td>
+            <td class="strong t-file__name"><a href="#d6b62244ed636fd13ce15d84e921e401648c1390" class="src_link" title="app/models/Description.rb">app/models/Description.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
             <td class="cell--number">4</td>
             <td class="cell--number">3</td>
@@ -339,7 +339,7 @@
       <tbody>
         
           <tr class="t-file">
-            <td class="strong t-file__name"><a href="#dc2336b4277082e07d76836cf0e426e35349da6c" class="src_link" title="app/controllers/allocations_controller.rb">app/controllers/allocations_controller.rb</a></td>
+            <td class="strong t-file__name"><a href="#dc2336b4277082e07d76836cf0e426e35349da6c" class="src_link" title="app/controllers/Descriptions_controller.rb">app/controllers/Descriptions_controller.rb</a></td>
             <td class="red strong cell--number t-file__coverage">66.67 %</td>
             <td class="cell--number">41</td>
             <td class="cell--number">21</td>
@@ -554,7 +554,7 @@
       <tbody>
         
           <tr class="t-file">
-            <td class="strong t-file__name"><a href="#d6b62244ed636fd13ce15d84e921e401648c1390" class="src_link" title="app/models/allocation.rb">app/models/allocation.rb</a></td>
+            <td class="strong t-file__name"><a href="#d6b62244ed636fd13ce15d84e921e401648c1390" class="src_link" title="app/models/Description.rb">app/models/Description.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
             <td class="cell--number">4</td>
             <td class="cell--number">3</td>
@@ -1063,7 +1063,7 @@
       
         <div class="source_table" id="dc2336b4277082e07d76836cf0e426e35349da6c">
   <div class="header">
-    <h3>app/controllers/allocations_controller.rb</h3>
+    <h3>app/controllers/Descriptions_controller.rb</h3>
     <h4>
       <span class="red">
   66.67%
@@ -1094,7 +1094,7 @@
 
             
 
-            <code class="ruby">class AllocationsController &lt; ApplicationController</code>
+            <code class="ruby">class DescriptionsController &lt; ApplicationController</code>
           </li>
         </div>
       
@@ -1105,7 +1105,7 @@
 
             
 
-            <code class="ruby">  #before_action :set_allocation, only: [:edit, :update]</code>
+            <code class="ruby">  #before_action :set_Description, only: [:edit, :update]</code>
           </li>
         </div>
       
@@ -1138,7 +1138,7 @@
 
             
 
-            <code class="ruby">    @allocations = Allocation.all </code>
+            <code class="ruby">    @descriptions = Description.all </code>
           </li>
         </div>
       
@@ -1193,7 +1193,7 @@
 
             
 
-            <code class="ruby">    @allocation = Allocation.new</code>
+            <code class="ruby">    @description = Description.new</code>
           </li>
         </div>
       
@@ -1226,7 +1226,7 @@
 
             
 
-            <code class="ruby">    @allocation = Allocation.new(params_allocation)</code>
+            <code class="ruby">    @description = Description.new(params_Description)</code>
           </li>
         </div>
       
@@ -1237,7 +1237,7 @@
 
             
 
-            <code class="ruby">    if @allocation.save</code>
+            <code class="ruby">    if @description.save</code>
           </li>
         </div>
       
@@ -1259,7 +1259,7 @@
 
             
 
-            <code class="ruby">      redirect_to @allocation</code>
+            <code class="ruby">      redirect_to @description</code>
           </li>
         </div>
       
@@ -1468,7 +1468,7 @@
 
             
 
-            <code class="ruby">   def params_allocation</code>
+            <code class="ruby">   def params_Description</code>
           </li>
         </div>
       
@@ -1479,7 +1479,7 @@
 
             
 
-            <code class="ruby">    params.require(:allocation).permit(:collaborator_id, :product_id)</code>
+            <code class="ruby">    params.require(:Description).permit(:collaborator_id, :product_id)</code>
           </li>
         </div>
       
@@ -4981,7 +4981,7 @@
       
         <div class="source_table" id="d6b62244ed636fd13ce15d84e921e401648c1390">
   <div class="header">
-    <h3>app/models/allocation.rb</h3>
+    <h3>app/models/Description.rb</h3>
     <h4>
       <span class="green">
   100.0%
@@ -5012,7 +5012,7 @@
 
             
 
-            <code class="ruby">class Allocation &lt; ApplicationRecord</code>
+            <code class="ruby">class Description &lt; ApplicationRecord</code>
           </li>
         </div>
       

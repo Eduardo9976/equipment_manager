@@ -1,18 +1,19 @@
+<%= stylesheet_link_tag "description" %>
 
-<%= form_with( model: @description, local:true) do |f|%>
-  <%= f.label :product_id, 'Produto' %>
-  <%= f.collection_select :product_id, @product, :id, :name%>
-  <%= f.label :model, 'Modelo'%>
-  <%= f.text_field(:model) %>
-  <%= f.label :serie_number, 'Número de série'%>
-  <%= f.text_field(:serie_number)%>
-  <%= f.label :memory, 'Memória'%>
-  <%= f.text_field(:memory)%>
-  <%= f.label :hard_drive, 'HD'%>
-  <%= f.text_field(:hard_drive) %>
-  <%= f.label :operational_system, 'Sistema Operacional'%>
-  <%= f.text_field(:operational_system) %>
-  <%= f.label :warranty, 'Garantia'%>
-  <%= f.date_field :warranty %>
-  <%= f.submit ('Enviar') %>
-<% end %>  
+  <%= form_with( model: @description, local:true) do |f|%>
+    <%= f.label :product_id, 'Produto' %>
+    <%= f.collection_select :product_id, @product, :id, :name%>
+    <%= f.label :model, 'Modelo'%>
+    <%= f.text_field(:model) %>
+    <%= f.label :serie_number, 'Número de série'%>
+    <%= f.text_field(:serie_number)%>  
+    <%= f.label :memory, 'Memória'%>
+    <%= f.select :memory, Description.memories.keys %>
+    <%= f.label :hard_drive, 'Hard Drive'%>
+    <%= f.select :hard_drive, Description.hard_drives.keys%>   
+    <%= f.label :operational_system, 'Sistema Operacional'%>
+    <%= f.select :operational_system, Description.operational_systems.keys%>  
+    <%= f.label :warranty, 'Garantia'%>
+    <%= f.date_field :warranty %>
+    <%= f.submit ('Enviar') %>
+  <% end %> 

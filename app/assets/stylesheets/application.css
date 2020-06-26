@@ -12,4 +12,197 @@
  *
  *= require_tree .
  *= require_self
- */
+*/
+
+body, header, nav, ul, li, a {
+  margin: 0;
+  padding: 0;
+}
+nav, ul, li, a{
+  list-style: none;
+  text-decoration: none;
+}
+img {
+  display: block;
+  background-size: cover;
+  width: 100%;
+}
+body {
+  background: #d3d3d3;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "header"
+                       "section"
+                       "footer";
+}
+header{
+  grid-area: header;
+}
+section{
+  grid-area: section;
+  justify-self: center;
+}
+footer {
+  grid-area: footer;
+}
+p{
+  font-family: 'Roboto', sans-serif;
+}
+h1, h2{
+  margin: 60px 10px;
+  color:  #565656;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  letter-spacing: .1em;
+}
+h1::after {
+  content:"";
+  display:block;
+  width:60px;
+  height:3px;
+  background:#565656;
+  margin:15px 0;
+}
+span {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.875em;
+  letter-spacing: .1em;
+  color: #FFF;
+}
+
+form {
+  max-width: 20%;
+  min-width: 270px;
+  margin: 30px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 10px;
+  background: rgb(100, 148, 237);
+  border: 2px solid #565656;
+  box-shadow: 3px 3px 0.5em black;
+  border-radius: 5px;
+}
+label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.875em;
+  letter-spacing: .1em;
+  color: #FFF;
+}
+input, select {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.875em;
+  letter-spacing: .1em;
+  color: #565656;
+  margin: 10px;
+  border: 3px solid #565656;
+}
+select{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline-style: none;
+  background: #FFF url("./images/arrow_select.png") no-repeat 220px center;
+}
+
+
+button, input[type=submit] {
+  padding: 0.62em;
+  position: relative;
+  margin: 10px;
+  background: rgb(100, 148, 237);
+  border: 0.12em solid rgba(100, 101, 226, 0.3);
+  border-radius: 20%;
+  box-shadow: 0.0625em 0.0625em 0.3125em black;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.875em;
+  letter-spacing: .1em;
+  color: #FFF;
+  cursor: pointer;
+}
+button:hover, input[type=submit]:hover{
+  background: rgb(174, 199, 246);
+  cursor: pointer;
+}
+
+/* header */
+
+header nav {
+  background-image: linear-gradient(to left, rgba(255,0,0,0), rgb(100, 148, 237));
+  padding: 1em;
+}
+header ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+header li {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+header a {
+  padding: 0.62em;
+  position: relative;
+  margin: 0.06em;
+  background: rgb(100, 148, 237);
+  border: 0.12em solid rgba(100, 101, 226, 0.3);
+  border-radius: 20%;
+  box-shadow: 0.0625em 0.0625em 0.3125em black;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.875em;
+  letter-spacing: .1em;
+  color: #FFF;
+}
+header a:hover {
+  background: rgb(174, 199, 246);
+}
+.equipamentos ul {
+  display: none;
+  flex-wrap: wrap;
+  flex-direction: column;
+  position: absolute;
+  z-index: 100;
+  top: 3em;
+}
+@media (max-width:385px){
+  .equipamentos ul {
+    top: 5.3125em;
+  }
+}
+.equipamentos:hover ul, .equipamentos ul.ativo {
+  display: flex;
+}
+.equipamentos li {
+  background: rgb(100, 148, 237);
+  border: 0.12em solid rgba(100, 101, 226, 0.3);
+  border-radius: 20%;
+  box-shadow: 0.0625em 0.0625em 0.3125em black;
+  display: inline-block;
+}
+
+.equipamentos li a {
+  display: block;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 60px;
+  justify-content: space-around;
+  background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(100, 148, 237));
+  padding: 1em;
+  
+}

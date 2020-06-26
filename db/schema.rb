@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_12_010838) do
+ActiveRecord::Schema.define(version: 2020_06_25_220621) do
 
   create_table "allocations", force: :cascade do |t|
     t.integer "collaborator_id", null: false
@@ -33,12 +33,13 @@ ActiveRecord::Schema.define(version: 2020_06_12_010838) do
     t.integer "product_id", null: false
     t.string "model"
     t.string "serie_number"
-    t.string "memory"
-    t.string "hard_drive"
-    t.string "operational_system"
     t.string "warranty"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "situation", default: 0
+    t.integer "memory"
+    t.integer "hard_drive"
+    t.integer "operational_system"
     t.index ["product_id"], name: "index_descriptions_on_product_id"
   end
 
