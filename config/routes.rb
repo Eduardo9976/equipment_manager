@@ -9,6 +9,13 @@ Rails.application.routes.draw do
   resources :collaborators do 
     get 'search', on: :collection
   end
+  resources :reservations, only: %i[new create edit update destroy]do 
+   get 'start', on: :member
+  end
+
+
+
+
  #get 'api/v1/cars', to: 'api#cars'
  namespace :api, defaults: {format: :json } do
     namespace :v1 do

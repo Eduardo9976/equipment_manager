@@ -1,5 +1,5 @@
 class CollaboratorsController < ApplicationController
-  before_action :set_collaborator, only: %i[show edit update destroy]
+  before_action :set_collaborator, only: %i[show edit update destroy start]
 
   def index
     @collaborators = Collaborator.all
@@ -45,6 +45,7 @@ class CollaboratorsController < ApplicationController
     @collaborators = Collaborator.where("name LIKE ?", "%#{@search_query}%")
                                  .or(Collaborator.where(registration: @search_query))       
   end  
+  
 
   private 
   def set_collaborator

@@ -1,15 +1,15 @@
 document.addEventListener("turbolinks:load", () => {
 
-  const form = document.querySelector('form')
-  console.log(form)
+  // const form = document.querySelector('form')
+  // console.log(form)
 
 
-  const memory = document.querySelector('#description_memory')
+  // const memory = document.querySelector('#description_memory')
   
-  const option = document.createElement('option')
-  option.setAttribute('value', '16gb')
-  option.innerText ='16GB'
-  memory.appendChild(option)
+  // const option = document.createElement('option')
+  // option.setAttribute('value', '16gb')
+  // option.innerText ='16GB'
+  // memory.appendChild(option)
   //   const fieldProduct = document.querySelector('#produto');
     
 
@@ -97,8 +97,7 @@ document.addEventListener("turbolinks:load", () => {
   //   JSONDados.forEach((item) => console.log(item.model))
   
   // }
-
-
+ 
 
 });  
   

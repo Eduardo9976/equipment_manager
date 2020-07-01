@@ -1,5 +1,7 @@
 class Description < ApplicationRecord
   belongs_to :product
+  belongs_to :reservation
+  
 
   enum situation: {available: 0, unavailable: 10}
   enum memory: {RAM_4GB: 4, RAM_8GB: 8, RAM_12GB: 12, RAM_16GB: 16, NULO: 100}
@@ -9,5 +11,9 @@ class Description < ApplicationRecord
   def set_situation
     self.situation = 'available'
   end  
+
+  def properties
+    "#{ model} #{serie_number}"
+  end
 end
 

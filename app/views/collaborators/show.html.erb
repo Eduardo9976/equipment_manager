@@ -11,6 +11,7 @@
 
 <%=link_to "Voltar", collaborators_path %>
 <%= link_to "Editar", edit_collaborator_path%>
+<%= link_to "Emprestar Equipamentos", start_reservation_path(@collaborator.id)%>
 <%= link_to "Apagar", @collaborator,
               method: :delete,
               data: { confirm: 'Deseja realmente apagar?' }%>
