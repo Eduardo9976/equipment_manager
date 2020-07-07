@@ -46,19 +46,24 @@ document.addEventListener("turbolinks:load", () => {
     }
     
     init() {
-      this.addEvents();
+      if ( this.product.length && this.descricao.length) {
+        this.addEvents();
+      }
       return this;
     }
   }
 
 
+
+   const url = /[a-z]{4}\u003A\u002F{2}[a-z]{9}\u003A[\d]{4}\u002F[a-z]{1,50}\u002F[\d]{1,500000}\u002F[a-z]{1,50}/gi
+   setInterval(() => {
+     if(window.location.href.match(url)) {
+       const formulario = new Reservation
+       formulario.init()
+     }
+   },1000)
   
-
-
-
-  const formulario = new Reservation
-  formulario.init()
-
 });  
   
-  
+
+

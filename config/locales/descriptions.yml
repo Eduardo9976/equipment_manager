@@ -1,0 +1,17 @@
+pt-BR:
+  activerecord:
+    models:
+      description: 
+        one: Descrição
+        other: Descrições
+    attributes:
+      description:
+        product_id: Produto
+        model: modelo
+        serie_number: Número de Série
+        warranty: Garantia
+        situation: Situação
+        memory: Memória
+        hard_drive: HD
+        operational_system: Sistema Operacional
+       

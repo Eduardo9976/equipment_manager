@@ -1,6 +1,7 @@
 class Description < ApplicationRecord
   belongs_to :product
-  belongs_to :reservation
+  has_many :reservation
+  
   
 
   enum situation: {available: 0, unavailable: 10}
@@ -9,7 +10,7 @@ class Description < ApplicationRecord
   enum operational_system: {Windows_10: 10, Windows_8: 8, Ubuntu: 20, OS_Majove: 30, OS_Catalina: 31, Android: 40, IOS: 50, _NULO: 100}
 
   def set_situation
-    self.situation = 'available'
+    self.situation = 'unavailable'
   end  
 
   def properties

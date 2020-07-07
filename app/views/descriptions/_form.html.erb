@@ -1,5 +1,12 @@
 <%= stylesheet_link_tag "description" %>
 
+  <% if @description.errors.full_messages.any? %>
+    <p> Não foi possível salvar, verifique os erros abaixo:</p>
+    <% @description.errors.full_messages.each do |erro| %>
+        <p> <%= erro %> </p>
+    <% end %> 
+  <% end %>   
+
   <%= form_with( model: @description, local:true) do |f|%>
     <%= f.label :product_id, 'Produto' %>
     <%= f.collection_select :product_id, @product, :id, :name%>

@@ -1,0 +1,14 @@
+pt-BR:
+  activerecord:
+    models:
+      reservation: 
+        one: Reserva
+        other: Reservas
+    attributes:
+      description:
+        product_id: Produto
+        product: Produto
+        collaborator_id: Colaborador
+        description_id: Descrição
+        description: Descrição
+        situation: Situação

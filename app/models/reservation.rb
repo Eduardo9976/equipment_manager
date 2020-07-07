@@ -1,4 +1,6 @@
 class Reservation < ApplicationRecord
   has_one :collaborator
-  has_many :description
+  belongs_to :description
+  validates :product_id, :description_id,  presence: true
+
 end

@@ -1,12 +1,10 @@
-  
-
-<%= form_with( model: @reservation, local:true ) do |f| %>
+ <%= form_with( model: @reservation, local:true ) do |f| %>
   <%= f.hidden_field :collaborator_id, value: @collaborator.id %>
   <h3> <%=@collaborator.name%> </h3>
   <%= f.label :product_id, 'Produto:'%>
-  <%= f.collection_select :product_id, @product, :id, :name%>
+  <%= f.collection_select :product_id, @product, :id, :name, {:include_blank => true} %>
   <%= f.label :description_id, 'Descrição:'%>
-  <%= f.collection_select :description_id, @description.where(situation: 0), :id, :properties%>
+  <%= f.collection_select :description_id, @description.where(situation: 0), :id, :properties, {:include_blank => true} %>
   <%= f.submit('Enviar') %>
 <% end %>
 

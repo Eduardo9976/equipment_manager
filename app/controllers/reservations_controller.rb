@@ -3,19 +3,24 @@ class ReservationsController < ApplicationController
   before_action :bd_all
   def start 
     @collaborator = Collaborator.find(params[:id])
-    @available_equips = @description.where(situation: 0)
     @reservation = Reservation.new
   end
   def create 
     @reservation = Reservation.new(params_reservation)
-    if @reservation.save
+    @reservation.description.unavailable!
+     if @reservation.save
       flash[:notice] = 'Cadastrado com sucesso'
-      redirect_to @reservation
+      redirect_to collaborator_path(@collaborator_id)
     else
       flash[:notice] ='Algo deu errado, tente novamente.'
-      render :new  
+      render :new
     end  
   end  
+
+  def show
+    
+  end
+  
 
   private
 
@@ -33,7 +38,7 @@ class ReservationsController < ApplicationController
 
 
    def params_reservation
-    params.require(:reservation).permit(:collaborator_id, :description_id)
+    params.require(:reservation).permit(:collaborator_id, :product_id, :description_id)
   end
 
 end  

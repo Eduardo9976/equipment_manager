@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resources :collaborators do 
     get 'search', on: :collection
   end
-  resources :reservations, only: %i[new create edit update destroy]do 
+  resources :reservations, only: %i[new create show edit update destroy]do 
    get 'start', on: :member
   end
 

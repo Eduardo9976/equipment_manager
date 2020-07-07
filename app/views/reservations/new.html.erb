@@ -1,0 +1,8 @@
+<% if @reservation.errors.full_messages.any? %>
+  <p> Não foi possível salvar, verifique os erros abaixo:</p>
+  <% @reservation.errors.full_messages.each do |erro| %>
+      <p> <%= erro %> </p>
+  <% end %> 
+<% end %>  
+
+<h1> Visite a página de Colaboradores, para cadastrar um novo Colaborador</h1>
